@@ -1,0 +1,70 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "Search",
+        "samples": [
+          "how does {exchangequery} work",
+          "what is {exchangequery}",
+          "{exchangequery}",
+          "how do i {exchangequery}"
+        ],
+        "slots": [
+          {
+            "name": "exchangequery",
+            "type": "AMAZON.SearchQuery",
+            "samples": [
+              "{exchangequery}",
+              "how do I {exchangequery}",
+              "what is {exchangequery}"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "stacksearch"
+  },
+  "prompts": [
+    {
+      "id": "Elicit.Intent-Search.IntentSlot-exchangequery",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What would you like to search?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "Search",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "exchangequery",
+            "type": "AMAZON.SearchQuery",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-Search.IntentSlot-exchangequery"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

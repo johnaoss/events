@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '7'
+script: node index.js
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: lambda
+  function_name: stack_search
+  region: us-east-1
+  role: arn:aws:iam::784849208592:role/TravisDeploy
+  runtime: nodejs6.10
+  handler_name: handler
+  access_key_id: AKIAJSPVXGCIC3HVRH6Q
+  secret_access_key:
+    secure: hgXz2rAtQKhxnit/i5+dZOOAp5hjgiZjdEUE+3doW3GkARbarSo+oTLUpQXxDJFS4QHDOwUTVTr896TvXr8qnc1P6a7TPoXLrpbgH6vdzG0m62Yn32c83EbyAsi2vTiNqwj+0tztcJkduvDCvWpthO+rl5pyGVzQoKt++HRypzLrUVYlYaikRagJ/mYZt7lVGopTrfI71YF8tqEWPcNzdFM+NEOqcJEXP3IElKs2/zWnqeTPdd541u4Wt6M985ACG8CKkx6l6g/x4Wxo0+thbUDzkvyEuYxz7Cv8nO894FJBYKOg5zdnuP9LoRg4Ms+mMABt/LsjZNJ30+jqVNIlg+2rSOMgXv08mHJfsHGamSur1Yy9Rd2oLVKghNLqJVkpnoPKXSdoICFJaOVMQiYB3ZwW2qTE2ImOorzIcs59RqvKePyO+sFGZkxuJrfOo3V3NwtF2WKF+qOGjYFjd6Z62sMMQ1xwZWdACcG05grgvwoOCkhA/CYQ820aXZ+Jg7M2zjYQqTKpLlVmgCwQLnyvC98AUO2AGdhvt++LPxVfSlLBKUAX0tfjTGR/LUvFQBV9fF7jxGdxfchc58R/pSeWvxBx4izgVewqr91P3ayoH8ckkbqAmlPhLhSgXcKanXgcAZSuonRdnSWBEbMPXkEtnI7/ZkXQ7q9tRpIDaJLcfHU=
+  on:
+    branch: master

@@ -1,0 +1,13 @@
+{
+    "concept": [
+        "max2 uses much less code due to the usage of instruction cmovge. But the real gain is that max2 does not involve branch jumps, jmp, which would have a significant performance penalty if the predicted result is not right. So why does a conditional move perform better? In a typical x86 processor, the execution of an instruction is divided into several stages. Roughly, we have different hardware to deal with different stages. So we do not have to wait for one instruction to finish to start a new one. This is called pipelining. In a branch case, the following instruction is determined by the preceding one, so we cannot do pipelining. We have to either wait or predict. In a conditional move case, the execution conditional move instruction is divided into several stages, but the earlier stages like Fetch and Decode does not depend on the result of the previous instruction; only latter stages need the result. Thus, we wait a fraction of one instruction's execution time. This is why the conditional move version is slower than the branch when prediction is easy. The book Computer Systems: A Programmer's Perspective, second edition explains this in detail. You can check Section 3.6.6 for Conditional Move Instructions, entire Chapter 4 for Processor Architecture, and Section 5.11.2 for a special treatment for Branch Prediction and Misprediction Penalties. Sometimes, some modern compilers can optimize our code to assembly with better performance, sometimes some compilers can't (the code in question is using Visual Studio's native compiler). Knowing the performance difference between branch and conditional move when unpredictable can help us write code with better performance when the scenario gets so complex that the compiler can not optimize them automatically."
+    ],
+    "code": [
+        "String1",
+        "String2",
+        "String3"
+    ],
+    "Title": "Advantage of sorted arrays rather than unsorted arrays",
+    "is_code?": false
+}
+

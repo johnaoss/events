@@ -1,0 +1,31 @@
+{
+  "name": "stacksearch",
+  "version": "0.0.1",
+  "description": "StackSearch for HTV2",
+  "main": "Lambda_Func.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "aws-sdk": "^2.202.0",
+    "request": "^2.83.0",
+    "stackexchange-node": "^1.0.1",
+    "travis-encrypt": "github:pwmckenna/node-travis-encrypt",
+    "twilio": "^3.11.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roloDeveloper/HTV2.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "a bunch of people",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roloDeveloper/HTV2/issues"
+  },
+  "homepage": "https://github.com/roloDeveloper/HTV2#readme"
+}

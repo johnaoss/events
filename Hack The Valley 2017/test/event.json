@@ -1,0 +1,44 @@
+{
+  "session": {
+    "new": false,
+    "sessionId": "mock_sessionId",
+    "application": {
+      "applicationId": "amzn1.ask.skill.773968b1-1359-4506-80ce-4217a46dad68"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "mock_userId"
+    }
+  },
+  "request": {
+    "type": "Search",
+    "requestId": "mock_requestId",
+    "locale": "en-US",
+    "timestamp": "2017-09-19T11:46:23Z",
+    "intent": {
+      "name": "which equals operator should be used in JavaScript comparisons",
+      "slots": {
+        "stackquery":{
+          "value": "how to clone all remote branches in git"
+        }
+      }
+    }
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.773968b1-1359-4506-80ce-4217a46dad68"
+      },
+      "user": {
+        "userId": "mock_userId"
+      },
+      "device": {
+        "supportedInterfaces": {}
+      }
+    }
+  },
+  "version": "1.0"
+}
