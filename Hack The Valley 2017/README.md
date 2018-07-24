@@ -24,8 +24,8 @@ On the Alexa side, you must ensure that the default endpoint for the skill you c
 
 ## Attribution
 
-This was made by a group of people at Hack the Valley 2 from February 23rd-25th 2018 in UTSC.
+This was made by @johnaoss, @rohilG, @garobles, and @rbangamm at Hack the Valley 2 from February 23rd-25th 2018 in UTSC.
 
 ## License
 
-Do what you want
+WTFPL 
