@@ -5,7 +5,7 @@
   "main": "Lambda_Func.js",
   "dependencies": {
     "alexa-sdk": "^1.0.25",
-    "aws-sdk": "^2.202.0",
+    "aws-sdk": "^2.814.0",
     "request": "^2.83.0",
     "stackexchange-node": "^1.0.1",
     "travis-encrypt": "github:pwmckenna/node-travis-encrypt",
